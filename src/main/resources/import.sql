@@ -1,3 +1,42 @@
+-- CREATE DATABASE zerhusen;
+
+--
+-- DROP TABLE IF EXISTS zerhusen.USER;
+--
+--
+-- -- 建表
+-- CREATE TABLE zerhusen.USER (
+--   id INT(11) NOT NULL AUTO_INCREMENT  COMMENT 'ID',
+--   USERNAME VARCHAR(50) NOT NULL COMMENT '用户名称',
+--   PASSWORD VARCHAR(100) NOT NULL COMMENT '用户密码',
+--   firstname VARCHAR(64) NOT NULL COMMENT 'firstname',
+--   lastname VARCHAR(64) COMMENT '名',
+--   email VARCHAR(64) NOT NULL COMMENT '邮件',
+--   ACTIVATED VARCHAR(1) DEFAULT '1' NULL COMMENT '是否可用',
+--   PRIMARY KEY (id)
+-- ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+--
+--
+-- DROP TABLE IF EXISTS zerhusen.AUTHORITY;
+--
+-- -- 建表
+-- CREATE TABLE zerhusen.AUTHORITY (
+--    NAME VARCHAR(50) NOT NULL
+-- ) ENGINE=INNODB DEFAULT CHARSET=utf8 ;
+--
+--
+--
+--
+--
+-- DROP TABLE IF EXISTS zerhusen.USER_AUTHORITY;
+--
+-- -- 建表
+-- CREATE TABLE zerhusen.USER_AUTHORITY (
+--    USER_ID INT(11) NOT NULL ,
+--    AUTHORITY_NAME VARCHAR(64) COMMENT '授权角色'
+-- ) ENGINE=INNODB DEFAULT CHARSET=utf8 ;
+
+
 # noinspection SqlNoDataSourceInspectionForFile
 INSERT INTO USER (ID, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL, ACTIVATED) VALUES (1, 'admin', '$2a$08$lDnHPz7eUkSi6ao14Twuau08mzhWrL4kyZGGU5xfiGALO/Vxd5DOi', 'admin', 'admin', 'admin@admin.com', 1);
 INSERT INTO USER (ID, USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL, ACTIVATED) VALUES (2, 'user', '$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC', 'user', 'user', 'enabled@user.com', 1);
